@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Lions - Schedule</title>
+    <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+    <nav>
+        <div class="menu-trigger" id="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="player.html">PLAYER</a></li>
+            <li><a href="schedule.html">SCHEDULE</a></li>
+        </ul>
+    </nav>
+    <header>
+        </header>
+
+    <main>
+        <h1>2026년 5월</h1>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                    <td>1<div class="match-info"><img src="lgtwins.png"> 18:30 대구</div></td>
+                    <td>2<div class="match-info"><img src="lgtwins.png"> 17:00 대구</div></td>
+                    <td>3<div class="match-info"><img src="lgtwins.png"> 14:00 대구</div></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5<div class="match-info"><img src="nc.png"> 14:00 대구</div></td>
+                    <td>6<div class="match-info"><img src="nc.png"> 18:30 대구</div></td>
+                    <td>7<div class="match-info"><img src="nc.png"> 18:30 대구</div></td>
+                    <td>8<div class="match-info"><img src="kiwoom.png"> 18:30 창원</div></td>
+                    <td>9<div class="match-info"><img src="kiwoom.png"> 17:00 창원</div></td>
+                    <td>10<div class="match-info"><img src="kiwoom.png"> 14:00 창원</div></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12<div class="match-info"><img src="kia.png"> 18:30 광주</div></td>
+                    <td>13<div class="match-info"><img src="kia.png"> 18:30 광주</div></td>
+                    <td>14<div class="match-info"><img src="kia.png"> 18:30 광주</div></td>
+                    <td>15<div class="match-info"><img src="ssg.png"> 18:30 대구</div></td>
+                    <td>16<div class="match-info"><img src="ssg.png"> 17:00 대구</div></td>
+                    <td>17<div class="match-info"><img src="ssg.png"> 14:00 대구</div></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>19<div class="match-info"><img src="hh.png"> 18:30 대전</div></td>
+                    <td>20<div class="match-info"><img src="hh.png"> 18:30 대전</div></td>
+                    <td>21<div class="match-info"><img src="hh.png"> 18:30 대전</div></td>
+                    <td>22<div class="match-info"><img src="doosan.png"> 18:30 대구</div></td>
+                    <td>23<div class="match-info"><img src="doosan.png"> 17:00 대구</div></td>
+                    <td>24<div class="match-info"><img src="doosan.png"> 14:00 대구</div></td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>26<div class="match-info"><img src="ktwiz.png"> 18:30 수원</div></td>
+                    <td>27<div class="match-info"><img src="ktwiz.png"> 18:30 수원</div></td>
+                    <td>28<div class="match-info"><img src="ktwiz.png"> 18:30 수원</div></td>
+                    <td>29<div class="match-info"><img src="lotte.png"> 18:30 대구</div></td>
+                    <td>30<div class="match-info"><img src="lotte.png"> 17:00 대구</div></td>
+                    <td>31<div class="match-info"><img src="lotte.png"> 14:00 대구</div></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 웹디자인_기말과제_박윤서</p>
+    </footer>
+    <script>
+        const trigger = document.getElementById('menu-trigger');
+        const menu = document.getElementById('nav-menu');
+        trigger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
