@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard', -apple-system, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 상단 네비게이션 바 */
+nav {
+    width: 100%;
+    background-color: #074CA1; /* 불투명한 삼성 블루 */
+    
+    /* 높이를 직접 고정합니다 */
+    height: 50px; 
+    
+    /* 기존의 padding이나 margin이 높이를 늘릴 수 있으므로 초기화합니다 */
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    align-items: center; /* 글자를 세로 중앙으로 정렬 */
+    position: relative;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 50px; /* nav의 height와 똑같이 맞추면 수직 중앙 정렬이 깔끔해집니다 */
+}
+
+/* 아래로 내려온 헤더 이미지 */
+header {
+    width: 100%;
+    height: 140px; /* 고정 높이 */
+    background: url('header.png') no-repeat center center;
+    background-size: cover;
+    display: block;
+}
+
+/* 메인 컨텐츠 */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 250px;
+    margin-bottom: 50px;
+}
+
+/* 섹션 공통 */
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* 굿즈/팀스토어 섹션 */
+.merchandise {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.merchandise img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 우승 트로피 섹션 */
+.achievements {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+.trophies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.trophies img {
+    height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* SNS 아이콘 공통 스타일 */
+.sns .icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.sns-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.sns-icon:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #888;
+    border-top: 1px solid #eee;
+}
+
+/* 햄버거 버튼 기본 스타일 (평소엔 숨김) */
+.menu-trigger {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.menu-trigger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+/* 모바일/태블릿용 미디어 쿼리 */
+@media (max-width: 768px) {
+    .menu-trigger {
+        display: block; /* 모바일에서 햄버거 버튼 표시 */
+    }
+
+    nav {
+        height: auto; /* 높이 고정 해제 */
+        padding: 10px 0;
+    }
+
+    #nav-menu {
+        display: none; /* 기본적으로 메뉴 숨김 */
+        flex-direction: column; /* 세로 나열 */
+        width: 100%;
+        background-color: #074CA1;
+        padding-top: 50px; /* 버튼과 겹치지 않게 여백 */
+        gap: 0;
+    }
+
+    #nav-menu.active {
+        display: flex; /* 클릭 시 메뉴 보임 */
+    }
+
+    #nav-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    #nav-menu li a {
+        display: block;
+        padding: 15px 0;
+    }
+}
